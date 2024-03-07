@@ -45,7 +45,6 @@ public class MyGdxGame extends ApplicationAdapter {
 
 
 		batch = new SpriteBatch();
-		int rnd = MathUtils.random(0,4);
 		fon = new Texture("fon/CmBk" + MathUtils.random(0,4) +".png");
 
 		Music music = Gdx.audio.newMusic(Gdx.files.internal("music/paul-romero-rob-king-combat-theme-0" + MathUtils.random(1, 4) + ".mp3"));
@@ -106,7 +105,7 @@ public class MyGdxGame extends ApplicationAdapter {
 		}
 		batch.end();
 		
-		boolean flag = false;
+		boolean flag = true;
 		for (Unit unit : darkTeam) {
 			if (unit.getHp() > 0) flag = false;
 		}
